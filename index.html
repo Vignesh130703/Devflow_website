@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFlow — The Intelligent Developer Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Shapes for AI aesthetic -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="app-icon.png" alt="DevFlow Logo" style="height: 40px; width: auto;">
+                DevFlow
+            </a>
+
+
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero special-hero" id="home">
+        <div class="floating-icons-container">
+            <div class="floating-icon icon-1"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="floating-icon icon-2"><i class="fa-solid fa-robot"></i></div>
+            <div class="floating-icon icon-3"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <div class="floating-icon icon-4"><i class="fa-solid fa-lock"></i></div>
+            <div class="floating-icon icon-5"><i class="fa-solid fa-microchip"></i></div>
+            <div class="floating-icon icon-6"><i class="fa-brands fa-apple"></i></div>
+        </div>
+        <div class="container relative">
+            <div class="hero-grid">
+                <div class="hero-text-content" data-aos="fade-right">
+                    <h1 class="silver-gradient-text" style="position: relative; z-index: 10;">One dashboard.<br>Total clarity.</h1>
+                    <p style="color: #a0a5b0; font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px;">Stop context switching. DevFlow brings your entire development lifecycle into a single, high-performance native workspace.</p>
+                    
+                    <div class="hero-features mt-4" style="display: flex; flex-wrap: wrap; gap: 1.5rem; color: #a0a5b0; margin-bottom: 2.5rem;">
+                        <span><i class="fa-solid fa-check-circle" style="color: var(--accent-primary);"></i> Native Speed</span>
+                        <span><i class="fa-solid fa-check-circle" style="color: var(--accent-primary);"></i> AI-Driven Fixes</span>
+                        <span><i class="fa-solid fa-check-circle" style="color: var(--accent-primary);"></i> Secure Secrets</span>
+                    </div>
+
+                    <div class="hero-btns" id="download">
+                        <!-- macOS Download Dropdown -->
+                        <div class="download-dropdown">
+                            <button class="btn btn-primary dropdown-trigger" id="macDownloadBtn">
+                                Download for macOS <i class="fa-brands fa-apple"></i>
+                            </button>
+                            <div class="dropdown-menu" id="macDropdown">
+                                <div class="dropdown-item">
+                                    <div class="item-info">
+                                        <span class="file-ext">.DMG</span>
+                                        <span class="file-desc">macOS Installer</span>
+                                    </div>
+                                    <a href="https://github.com/Vignesh130703/Devflow/releases/download/windows/DevFlow.app.zip" class="btn-download-now">Download Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Windows Download Dropdown -->
+                        <div class="download-dropdown">
+                            <button class="btn btn-outline special-btn-outline dropdown-trigger" id="winDownloadBtn">
+                                Download for Windows <i class="fa-brands fa-windows"></i>
+                            </button>
+                            <div class="dropdown-menu" id="winDropdown">
+                                <div class="dropdown-item">
+                                    <div class="item-info">
+                                        <span class="file-ext">.MSI</span>
+                                        <span class="file-desc">Windows Installer</span>
+                                    </div>
+                                    <a href="https://github.com/Vignesh130703/Devflow/releases/download/windows/DevFlow_1.0.0_x64_en-US.msi" class="btn-download-now">Download Now</a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-item">
+                                    <div class="item-info">
+                                        <span class="file-ext">.EXE</span>
+                                        <span class="file-desc">Setup Installer</span>
+                                    </div>
+                                    <a href="https://github.com/Vignesh130703/Devflow/releases/download/windows/DevFlow_1.0.0_x64-setup.exe" class="btn-download-now">Download Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p id="downloadCounter" style="font-size: 0.95rem; margin-top: 1.5rem; color: #a0a5b0;">
+                        <span id="countNumber" style="color: var(--accent-primary); font-weight: bold;">20</span> users are downloading this, be one among them!
+                    </p>
+                </div>
+
+                <div class="hero-image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="image.png" alt="DevFlow Dashboard" class="hero-dashboard-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2>The Ecosystem</h2>
+                <p>Everything you need — unified, simplified, and intelligent.</p>
+            </div>
+
+            <div class="bouncy-cards-grid">
+                <!-- Feature 1 -->
+                <div class="bouncy-card bouncy-card-narrow glass-panel group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-content">
+                        <i class="fa-solid fa-git-alt service-icon"></i>
+                        <h3>Repo Management</h3>
+                    </div>
+                    <div class="bouncy-drawer drawer-violet">
+                        <span>Manage, clone, and track all your repositories without switching tools.</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bouncy-card bouncy-card-wide glass-panel group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-content">
+                        <i class="fa-solid fa-robot service-icon"></i>
+                        <h3>AI Assistant</h3>
+                    </div>
+                    <div class="bouncy-drawer drawer-amber">
+                        <span>Understand errors instantly with AI that reads your logs and code context.</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bouncy-card bouncy-card-wide glass-panel group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-content">
+                        <i class="fa-solid fa-cloud-arrow-up service-icon"></i>
+                        <h3>Deployment Control</h3>
+                    </div>
+                    <div class="bouncy-drawer drawer-green">
+                        <span>Trigger deployments and monitor builds across Vercel and Netlify in real time.</span>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bouncy-card bouncy-card-narrow glass-panel group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-content">
+                        <i class="fa-solid fa-lock service-icon"></i>
+                        <h3>Secure Vault</h3>
+                    </div>
+                    <div class="bouncy-drawer drawer-pink">
+                        <span>Secure your secrets locally with AES-256 encrypted storage. Never uploaded.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installer Section -->
+    <section class="section" id="demo">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2 style="color: #fff; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">Install DevFlow in seconds</h2>
+                <p style="color: #a0a5b0; font-size: 1.1rem;">Simple setup on Windows and macOS</p>
+                
+                <!-- OS Toggle -->
+                <div class="os-toggle-container" style="margin-top: 3rem;">
+                    <div class="os-toggle">
+                        <button class="os-toggle-btn active" data-os="windows">Windows</button>
+                        <button class="os-toggle-btn" data-os="macos">macOS</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Installer Window -->
+            <div class="app-window-container" data-aos="fade-up" data-aos-duration="1000" style="margin-top: 2rem;">
+                <div id="dynamicWindow" class="app-window is-windows">
+                    <div class="app-window-header">
+                        <div class="app-window-controls">
+                            <span class="app-control btn-1"></span>
+                            <span class="app-control btn-2"></span>
+                            <span class="app-control btn-3"></span>
+                        </div>
+                        <div class="app-window-title" id="installerWindowTitle">DevFlow — Windows Installation</div>
+                    </div>
+                        <div class="app-window-body">
+                            <iframe id="demoVideo" 
+                                src="https://www.youtube-nocookie.com/embed/BRsHCMurhmc?autoplay=1&mute=1&loop=1&playlist=BRsHCMurhmc&modestbranding=1&rel=0&controls=0" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen 
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                class="app-window-video"
+                                style="width: 100%; height: 100%; border: none;">
+                            </iframe>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features" style="padding-top: 0;">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2 style="color: #fff; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">Experience the Workflow</h2>
+                <p style="color: #a0a5b0; font-size: 1.1rem;">Powerful features for every developer.</p>
+                
+
+
+                <!-- Feature Navbar -->
+                <div class="feature-nav-container" style="margin-top: 3rem; display: flex; justify-content: center;">
+                    <div class="feature-navbar" style="background: rgba(16, 21, 61, 0.5); padding: 0.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); display: flex; gap: 1rem;">
+                        <button class="feature-nav-btn active" data-video="https://www.youtube-nocookie.com/embed/zJMXBOJXHQE?autoplay=1&mute=1&loop=1&playlist=zJMXBOJXHQE&modestbranding=1&rel=0&controls=0" style="background: transparent; border: none; color: #fff; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub Sync
+                        </button>
+                        <button class="feature-nav-btn" data-video="https://www.youtube-nocookie.com/embed/sdA905wqy-E?autoplay=1&mute=1&loop=1&playlist=sdA905wqy-E&modestbranding=1&rel=0&controls=0" style="background: transparent; border: none; color: #fff; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; opacity: 0.6;">
+                            <i class="fa-solid fa-robot"></i> AI Assistant
+                        </button>
+                        <button class="feature-nav-btn" data-video="https://www.youtube-nocookie.com/embed/AK0ZELqts8g?autoplay=1&mute=1&loop=1&playlist=AK0ZELqts8g&modestbranding=1&rel=0&controls=0" style="background: transparent; border: none; color: #fff; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; opacity: 0.6;">
+                            <i class="fa-solid fa-rocket"></i> Deployment
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2-Column Split Layout with Fake Window -->
+            <div class="experience-grid">
+                <!-- Left: Video Showcase in Fake Window -->
+                <div class="app-window-container" data-aos="fade-right" data-aos-duration="1000">
+                    <div id="featureWindow" class="app-window is-macos glass-panel" style="height: 100%; border-radius: 20px; overflow: hidden; position: relative;">
+                        <div class="app-window-header">
+                            <div class="app-window-controls">
+                                <span class="app-control btn-1"></span>
+                                <span class="app-control btn-2"></span>
+                                <span class="app-control btn-3"></span>
+                            </div>
+                            <div class="app-window-title" id="featureWindowTitle">DevFlow — GitHub Sync</div>
+                        </div>
+                        <div class="app-window-body" style="position: relative; height: calc(100% - 40px); background: transparent; overflow: hidden;">
+                            <div id="featureSlider" class="feature-slider" style="display: flex; width: 300%; height: 100%; transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);">
+                                <div class="slider-item" style="width: 33.333%; height: 100%;">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/zJMXBOJXHQE?autoplay=1&mute=1&loop=1&playlist=zJMXBOJXHQE&modestbranding=1&rel=0&controls=0" 
+                                        frameborder="0" class="app-window-video" style="width: 100%; height: 100%; pointer-events: none;"></iframe>
+                                </div>
+                                <div class="slider-item" style="width: 33.333%; height: 100%;">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/sdA905wqy-E?autoplay=1&mute=1&loop=1&playlist=sdA905wqy-E&modestbranding=1&rel=0&controls=0" 
+                                        frameborder="0" class="app-window-video" style="width: 100%; height: 100%; pointer-events: none;"></iframe>
+                                </div>
+                                <div class="slider-item" style="width: 33.333%; height: 100%;">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/AK0ZELqts8g?autoplay=1&mute=1&loop=1&playlist=AK0ZELqts8g&modestbranding=1&rel=0&controls=0" 
+                                        frameborder="0" class="app-window-video" style="width: 100%; height: 100%; pointer-events: none;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Details Panel (Strict Height Containment) -->
+                <div class="details-panel-container" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="glass-panel details-glass-panel">
+                        <div id="detailsContent" class="scrollbar-hide details-content-inner">
+                            <h3 id="detailsTitle" style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--accent-primary);">GitHub Management</h3>
+                            <p id="detailsText" class="streaming-text" style="font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary);" 
+                                data-text="Experience intelligent GitHub repository management through a powerful unified dashboard built for modern developers. DevFlow AI seamlessly integrates with your GitHub account to provide real-time repository synchronization, advanced project insights, commit tracking, and smart workflow automation — all without leaving the platform. Instantly monitor repository activity, visualize commit history, manage uploads, track deployments, and receive live GitHub notifications from one centralized workspace. With deep GitHub API integration, developers can securely manage repositories, automate deployments, detect project issues, and maintain complete visibility over their development ecosystem with speed, clarity, and efficiency."></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about the DevFlow ecosystem.</p>
+            </div>
+
+            <div class="faq-container" style="max-width: 800px; margin: 3rem auto 0;">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item glass-panel" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>What is DevFlow exactly?</h3>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>DevFlow is a unified native desktop application that consolidates your development workflow. It brings together repository management, AI-driven debugging, deployment monitoring, and secret storage into a single, high-performance interface.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item glass-panel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Is DevFlow free to use?</h3>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The core DevFlow dashboard is completely free and open-source. We also offer a "DevFlow Pro" tier for teams that includes advanced collaboration features and priority AI assistance.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item glass-panel" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Which platforms are supported?</h3>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, DevFlow is available as a native app for macOS (Intel and Apple Silicon) and Windows 10/11. A Linux version is currently in early beta and will be released soon.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item glass-panel" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>How does the AI assistant work?</h3>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The AI assistant scans your local build logs and code context to identify errors in real-time. It uses Claude and GPT-4o to suggest precise fixes, so you spend less time searching StackOverflow and more time building.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item glass-panel" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h3>Is my data secure?</h3>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Security is our top priority. Your environment variables and secrets are encrypted with AES-256 and stored locally on your machine. We never upload your sensitive data to our servers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="justify-content: center; text-align: center;">
+                <div class="footer-col">
+                    <div class="footer-bottom" style="margin-top: 0; border-top: none; padding-top: 0;">
+                        <p>&copy; 2026 DevFlow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
